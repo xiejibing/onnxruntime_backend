@@ -137,7 +137,7 @@ RUN curl -L https://storage.openvinotoolkit.org/repositories/openvino/packages/2
     rm openvino_${ONNXRUNTIME_OPENVINO_VERSION}.tgz && \
     (cd ${INTEL_OPENVINO_DIR}/install_dependencies && \
         ./install_openvino_dependencies.sh -y) && \
-    && apt-get install -y --no-install-recommends cmake=3.27.7* cmake-data=3.27.7* \
+    apt-get install -y --no-install-recommends cmake=3.27.7* cmake-data=3.27.7* && \
     ln -s ${INTEL_OPENVINO_DIR} ${INTEL_OPENVINO_DIR}/../openvino_`echo ${ONNXRUNTIME_OPENVINO_VERSION} | awk '{print substr($0,0,4)}'`
 
 # Step 2: Configure the environment
