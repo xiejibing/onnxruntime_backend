@@ -54,7 +54,7 @@ def dockerfile_common():
     df = """
 ARG BASE_IMAGE={}
 ARG ONNXRUNTIME_VERSION={}
-ARG ONNXRUNTIME_REPO=https://github.com/microsoft/onnxruntime
+ARG ONNXRUNTIME_REPO=https://github.com/xiejibing/onnxruntime
 ARG ONNXRUNTIME_BUILD_CONFIG={}
 """.format(
         FLAGS.triton_container, FLAGS.ort_version, FLAGS.ort_build_config
